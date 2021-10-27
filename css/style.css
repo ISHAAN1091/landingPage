@@ -14,14 +14,75 @@
 
 body {
     background: var(--violet) url("../images/bg-mobile.svg") no-repeat;
+    background-size: cover;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+header {
+    margin: 40px;
+    align-self: flex-start;
+}
+
+header > img {
+    max-width: 120px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 75px;
+}
+
+section > img {
+    max-width: 300px;
+}
+
+section > h1 {
+    max-width: 250px;
+    text-align: center;
+}
+
+section > p {
+    max-width: 300px;
+    text-align: center;
+}
+
+section > button {
+    padding: 11px 75px;
+    border-radius: 30px;
+    border: 0;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
+}
+
+.social_icons {
+    display: flex;
+    justify-content: space-between;
+    min-width: 104px;
+    margin-bottom: 30px;
 }
 
 .social {
     text-decoration: none;
     color: white;
-    border-radius: 50%;
+    border-radius: 30px;
+    min-width: 28px;
+    min-height: 28px;
     border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 2px;
 }
 
 .attribution {
@@ -29,5 +90,5 @@ body {
     text-align: center;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: orange;
 }
