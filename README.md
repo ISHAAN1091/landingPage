@@ -1,6 +1,5 @@
-# Order-summary-component
+# Huddle Landing Page
 
-Solution challenge [Order summary component frontend mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj) frontend mentor
 ![img](./images/finalLook.jpg)
 
 # Link
