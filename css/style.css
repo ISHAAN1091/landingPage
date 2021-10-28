@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 * {
@@ -14,12 +14,17 @@
 
 body {
     background: var(--violet) url("../images/bg-mobile.svg") no-repeat;
-    background-size: cover;
+    background-size: contain;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -36,53 +41,67 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
     margin-bottom: 75px;
 }
 
 section > img {
-    max-width: 300px;
+    max-width: 80%;
 }
 
-section > h1 {
+.flex {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.flex > h1 {
     max-width: 250px;
     text-align: center;
 }
 
-section > p {
+.flex > p {
     max-width: 300px;
     text-align: center;
 }
 
-section > button {
+.flex > button {
     padding: 11px 75px;
     border-radius: 30px;
     border: 0;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
+    color: var(--violet);
+}
+
+.flex > button:hover {
+    background-color: var(--soft_magenta);
 }
 
 .social_icons {
     display: flex;
     justify-content: space-between;
-    min-width: 104px;
-    margin-bottom: 30px;
+    min-width: 125px;
+    margin-bottom: 15px;
 }
 
-.social {
+.social > a {
+    padding: 15px;
     text-decoration: none;
     color: white;
-    border-radius: 30px;
-    min-width: 28px;
-    min-height: 28px;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
     border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer {
-    position: fixed;
-    bottom: 2px;
+.social > a:hover {
+    color: var(--soft_magenta);
+    border: 1px solid var(--soft_magenta);
 }
 
 .attribution {
@@ -91,4 +110,57 @@ footer {
 }
 .attribution a {
     color: orange;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url("../images/bg-desktop.svg");
+        background-size: cover;
+        min-height: 100vh;
+        font-size: 1.2rem;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    header {
+        margin: 40px 10% 70px 10%;
+    }
+
+    header > img {
+        max-width: 200px;
+    }
+
+    section {
+        flex-direction: row;
+        gap: 50px;
+        align-items: flex-start;
+        margin: 0 10% 20px 10%;
+    }
+
+    .flex {
+        margin-top: 5%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .flex > h1 {
+        text-align: left;
+        max-width: 350px;
+    }
+
+    .flex > p {
+        text-align: left;
+        max-width: 460px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .flex > button {
+        padding: 16px 50px;
+    }
+
+    .social_icons {
+        justify-content: flex-end;
+        min-width: 90%;
+        gap: 20px;
+    }
 }
